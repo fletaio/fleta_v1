@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"reflect"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/encoding"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/encoding"
 	"github.com/petar/GoLLRB/llrb"
 )
 

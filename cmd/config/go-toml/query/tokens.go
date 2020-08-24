@@ -2,9 +2,10 @@ package query
 
 import (
 	"fmt"
-	"github.com/fletaio/fleta/cmd/config/go-toml"
 	"strconv"
 	"unicode"
+
+	"github.com/fletaio/fleta_v1/cmd/config/go-toml"
 )
 
 // Define tokens

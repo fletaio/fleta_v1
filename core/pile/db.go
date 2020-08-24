@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fletaio/fleta/common/hash"
+	"github.com/fletaio/fleta_v1/common/hash"
 )
 
 // DB provides stack like value store using piles

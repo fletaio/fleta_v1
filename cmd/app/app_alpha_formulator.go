@@ -1,10 +1,10 @@
 package app
 
 import (
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/core/types"
-	"github.com/fletaio/fleta/process/formulator"
-	"github.com/fletaio/fleta/process/vault"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/core/types"
+	"github.com/fletaio/fleta_v1/process/formulator"
+	"github.com/fletaio/fleta_v1/process/vault"
 )
 
 func setupAlphaFormulator(sp *vault.Vault, ctw *types.ContextWrapper, alphaPolicy *formulator.AlphaPolicy) {

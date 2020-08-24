@@ -1,8 +1,8 @@
 package admin
 
 import (
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/core/types"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/core/types"
 )
 
 // Admin manages balance of accounts of the chain

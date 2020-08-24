@@ -28,7 +28,7 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/fletaio/fleta/common/crypto/ethereum/crypto/sha3"
+	"github.com/fletaio/fleta_v1/common/crypto/ethereum/crypto/sha3"
 )
 
 var (

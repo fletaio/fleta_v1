@@ -3,7 +3,7 @@ package apiserver
 import (
 	"sync"
 
-	"github.com/fletaio/fleta/core/types"
+	"github.com/fletaio/fleta_v1/core/types"
 	"github.com/labstack/echo"
 )
 

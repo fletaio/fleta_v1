@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"sync"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/core/chain"
-	"github.com/fletaio/fleta/core/types"
-	"github.com/fletaio/fleta/encoding"
-	"github.com/fletaio/fleta/service/apiserver"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/core/chain"
+	"github.com/fletaio/fleta_v1/core/types"
+	"github.com/fletaio/fleta_v1/encoding"
+	"github.com/fletaio/fleta_v1/service/apiserver"
 )
 
 // Consensus implements the proof of formulator algorithm

@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/hash"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/hash"
 )
 
 // Loader defines functions that loads state data from the target chain

@@ -5,11 +5,11 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/hash"
-	"github.com/fletaio/fleta/common/queue"
-	"github.com/fletaio/fleta/core/chain"
-	"github.com/fletaio/fleta/core/types"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/hash"
+	"github.com/fletaio/fleta_v1/common/queue"
+	"github.com/fletaio/fleta_v1/core/chain"
+	"github.com/fletaio/fleta_v1/core/types"
 )
 
 // TransactionPool provides a transaction queue

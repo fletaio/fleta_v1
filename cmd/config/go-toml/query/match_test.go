@@ -2,8 +2,9 @@ package query
 
 import (
 	"fmt"
-	"github.com/fletaio/fleta/cmd/config/go-toml"
 	"testing"
+
+	"github.com/fletaio/fleta_v1/cmd/config/go-toml"
 )
 
 // dump path tree to a string

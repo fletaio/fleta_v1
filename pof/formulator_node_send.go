@@ -3,8 +3,8 @@ package pof
 import (
 	"time"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/service/p2p"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/service/p2p"
 )
 
 func (fr *FormulatorNode) sendMessage(Priority int, Target common.PublicHash, m interface{}) {

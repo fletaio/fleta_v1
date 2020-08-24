@@ -3,7 +3,7 @@ package vault
 import (
 	"bytes"
 
-	"github.com/fletaio/fleta/common/amount"
+	"github.com/fletaio/fleta_v1/common/amount"
 )
 
 // Policy defines a vault policy

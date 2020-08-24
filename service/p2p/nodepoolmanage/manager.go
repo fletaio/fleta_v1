@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/service/p2p/peer"
-	"github.com/fletaio/fleta/service/p2p/peermessage"
-	"github.com/fletaio/fleta/service/p2p/storage"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/service/p2p/peer"
+	"github.com/fletaio/fleta_v1/service/p2p/peermessage"
+	"github.com/fletaio/fleta_v1/service/p2p/storage"
 )
 
 // peer errors

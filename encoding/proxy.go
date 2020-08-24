@@ -4,7 +4,7 @@ import (
 	"io"
 	"reflect"
 
-	"github.com/fletaio/fleta/common/hash"
+	"github.com/fletaio/fleta_v1/common/hash"
 	"github.com/vmihailenco/msgpack"
 )
 

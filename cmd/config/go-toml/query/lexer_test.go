@@ -1,8 +1,9 @@
 package query
 
 import (
-	"github.com/fletaio/fleta/cmd/config/go-toml"
 	"testing"
+
+	"github.com/fletaio/fleta_v1/cmd/config/go-toml"
 )
 
 func testQLFlow(t *testing.T, input string, expectedFlow []token) {

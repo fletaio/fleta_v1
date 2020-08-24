@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"github.com/fletaio/fleta/common"
+	"github.com/fletaio/fleta_v1/common"
 )
 
 // RevokedEvent moves a ownership of utxos

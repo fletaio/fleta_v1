@@ -5,11 +5,11 @@ import (
 	"math/big"
 	"reflect"
 
-	"github.com/fletaio/fleta/encoding"
+	"github.com/fletaio/fleta_v1/encoding"
 
-	"github.com/fletaio/fleta/common"
-	ecrypto "github.com/fletaio/fleta/common/crypto"
-	"github.com/fletaio/fleta/common/hash"
+	"github.com/fletaio/fleta_v1/common"
+	ecrypto "github.com/fletaio/fleta_v1/common/crypto"
+	"github.com/fletaio/fleta_v1/common/hash"
 )
 
 func init() {

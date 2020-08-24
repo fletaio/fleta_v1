@@ -5,13 +5,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/binutil"
-	"github.com/fletaio/fleta/common/hash"
-	"github.com/fletaio/fleta/core/backend"
-	"github.com/fletaio/fleta/core/pile"
-	"github.com/fletaio/fleta/core/types"
-	"github.com/fletaio/fleta/encoding"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/binutil"
+	"github.com/fletaio/fleta_v1/common/hash"
+	"github.com/fletaio/fleta_v1/core/backend"
+	"github.com/fletaio/fleta_v1/core/pile"
+	"github.com/fletaio/fleta_v1/core/types"
+	"github.com/fletaio/fleta_v1/encoding"
 )
 
 // Store saves the target chain state

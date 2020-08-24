@@ -9,7 +9,7 @@ import (
 
 	uuid "github.com/satori/go.uuid"
 
-	"github.com/fletaio/fleta/service/apiserver"
+	"github.com/fletaio/fleta_v1/service/apiserver"
 )
 
 func DoRequest(hostURL string, Method string, Params []interface{}) (interface{}, error) {

@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/core/types"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/core/types"
 )
 
 // UpdateValidatorPolicy is used to update validator policy of the hyper formulator

@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/core/types"
-	"github.com/fletaio/fleta/encoding"
-	"github.com/fletaio/fleta/process/admin"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/core/types"
+	"github.com/fletaio/fleta_v1/encoding"
+	"github.com/fletaio/fleta_v1/process/admin"
 )
 
 // UpdatePolicy is used to update vault policy

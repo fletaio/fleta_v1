@@ -1,6 +1,6 @@
 package types
 
-import "github.com/fletaio/fleta/common"
+import "github.com/fletaio/fleta_v1/common"
 
 // LoaderWrapper is an interface to load state data from the target chain
 type LoaderWrapper interface {

@@ -1,12 +1,12 @@
 package formulator
 
 import (
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/amount"
-	"github.com/fletaio/fleta/core/types"
-	"github.com/fletaio/fleta/encoding"
-	"github.com/fletaio/fleta/process/admin"
-	"github.com/fletaio/fleta/process/vault"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/amount"
+	"github.com/fletaio/fleta_v1/core/types"
+	"github.com/fletaio/fleta_v1/encoding"
+	"github.com/fletaio/fleta_v1/process/admin"
+	"github.com/fletaio/fleta_v1/process/vault"
 )
 
 // Formulator serves reward system of the chain

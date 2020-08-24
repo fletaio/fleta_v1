@@ -2,7 +2,8 @@ package query
 
 import (
 	"fmt"
-	"github.com/fletaio/fleta/cmd/config/go-toml"
+
+	"github.com/fletaio/fleta_v1/cmd/config/go-toml"
 )
 
 // base match

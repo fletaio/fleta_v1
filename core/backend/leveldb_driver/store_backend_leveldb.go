@@ -8,7 +8,7 @@ import (
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/util"
 
-	"github.com/fletaio/fleta/core/backend"
+	"github.com/fletaio/fleta_v1/core/backend"
 )
 
 func init() {

@@ -7,10 +7,11 @@ package query
 
 import (
 	"fmt"
-	"github.com/fletaio/fleta/cmd/config/go-toml"
 	"strconv"
 	"strings"
 	"unicode/utf8"
+
+	"github.com/fletaio/fleta_v1/cmd/config/go-toml"
 )
 
 // Lexer state function

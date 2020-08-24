@@ -5,7 +5,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/fletaio/fleta/common/binutil"
+	"github.com/fletaio/fleta_v1/common/binutil"
 )
 
 //peermessage errors

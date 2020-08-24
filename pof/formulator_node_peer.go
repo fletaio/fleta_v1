@@ -3,11 +3,11 @@ package pof
 import (
 	"math/rand"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/rlog"
-	"github.com/fletaio/fleta/core/chain"
-	"github.com/fletaio/fleta/service/p2p"
-	"github.com/fletaio/fleta/service/p2p/peer"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/rlog"
+	"github.com/fletaio/fleta_v1/core/chain"
+	"github.com/fletaio/fleta_v1/service/p2p"
+	"github.com/fletaio/fleta_v1/service/p2p/peer"
 )
 
 // OnConnected is called after a new  peer is connected

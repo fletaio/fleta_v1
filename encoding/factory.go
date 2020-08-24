@@ -3,7 +3,7 @@ package encoding
 import (
 	"sync"
 
-	"github.com/fletaio/fleta/common/factory"
+	"github.com/fletaio/fleta_v1/common/factory"
 )
 
 var lock sync.Mutex

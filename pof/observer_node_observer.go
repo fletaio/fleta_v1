@@ -3,15 +3,15 @@ package pof
 import (
 	"time"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/binutil"
-	"github.com/fletaio/fleta/common/debug"
-	"github.com/fletaio/fleta/common/rlog"
-	"github.com/fletaio/fleta/core/chain"
-	"github.com/fletaio/fleta/core/types"
-	"github.com/fletaio/fleta/encoding"
-	"github.com/fletaio/fleta/service/p2p"
-	"github.com/fletaio/fleta/service/p2p/peer"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/binutil"
+	"github.com/fletaio/fleta_v1/common/debug"
+	"github.com/fletaio/fleta_v1/common/rlog"
+	"github.com/fletaio/fleta_v1/core/chain"
+	"github.com/fletaio/fleta_v1/core/types"
+	"github.com/fletaio/fleta_v1/encoding"
+	"github.com/fletaio/fleta_v1/service/p2p"
+	"github.com/fletaio/fleta_v1/service/p2p/peer"
 )
 
 func (ob *ObserverNode) onObserverRecv(p peer.Peer, bs []byte) error {

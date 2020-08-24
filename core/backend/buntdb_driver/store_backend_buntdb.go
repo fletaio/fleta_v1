@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fletaio/fleta/core/backend"
-	"github.com/fletaio/fleta/core/backend/buntdb_driver/buntdb"
+	"github.com/fletaio/fleta_v1/core/backend"
+	"github.com/fletaio/fleta_v1/core/backend/buntdb_driver/buntdb"
 )
 
 func init() {

@@ -1,9 +1,9 @@
 package chain
 
 import (
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/binutil"
-	"github.com/fletaio/fleta/common/hash"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/binutil"
+	"github.com/fletaio/fleta_v1/common/hash"
 )
 
 var (

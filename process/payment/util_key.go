@@ -1,7 +1,7 @@
 package payment
 
 import (
-	"github.com/fletaio/fleta/common/binutil"
+	"github.com/fletaio/fleta_v1/common/binutil"
 )
 
 // tags

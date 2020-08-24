@@ -9,21 +9,21 @@ import (
 	lediscfg "github.com/siddontang/ledisdb/config"
 	"github.com/siddontang/ledisdb/ledis"
 
-	"github.com/fletaio/fleta/encoding"
-	"github.com/fletaio/fleta/service/p2p"
+	"github.com/fletaio/fleta_v1/encoding"
+	"github.com/fletaio/fleta_v1/service/p2p"
 
-	"github.com/fletaio/fleta/common/amount"
+	"github.com/fletaio/fleta_v1/common/amount"
 
-	"github.com/fletaio/fleta/core/chain"
-	"github.com/fletaio/fleta/process/formulator"
-	"github.com/fletaio/fleta/process/vault"
+	"github.com/fletaio/fleta_v1/core/chain"
+	"github.com/fletaio/fleta_v1/process/formulator"
+	"github.com/fletaio/fleta_v1/process/vault"
 
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/hash"
-	"github.com/fletaio/fleta/common/key"
-	"github.com/fletaio/fleta/core/backend"
-	"github.com/fletaio/fleta/core/types"
-	"github.com/fletaio/fleta/service/apiserver"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/hash"
+	"github.com/fletaio/fleta_v1/common/key"
+	"github.com/fletaio/fleta_v1/core/backend"
+	"github.com/fletaio/fleta_v1/core/types"
+	"github.com/fletaio/fleta_v1/service/apiserver"
 )
 
 type Bank struct {

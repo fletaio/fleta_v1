@@ -6,9 +6,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/fletaio/fleta/common/binutil"
-	"github.com/fletaio/fleta/common/queue"
-	"github.com/fletaio/fleta/core/types"
+	"github.com/fletaio/fleta_v1/common/binutil"
+	"github.com/fletaio/fleta_v1/common/queue"
+	"github.com/fletaio/fleta_v1/core/types"
 )
 
 // TCPAsyncPeer manages send and recv of the connection

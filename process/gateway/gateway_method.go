@@ -1,8 +1,8 @@
 package gateway
 
 import (
-	"github.com/fletaio/fleta/common/hash"
-	"github.com/fletaio/fleta/core/types"
+	"github.com/fletaio/fleta_v1/common/hash"
+	"github.com/fletaio/fleta_v1/core/types"
 )
 
 // HasERC20TXID returns the erc20 txid has processed or not

@@ -1,14 +1,14 @@
 package app
 
 import (
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/amount"
-	"github.com/fletaio/fleta/core/types"
-	"github.com/fletaio/fleta/process/admin"
-	"github.com/fletaio/fleta/process/formulator"
-	"github.com/fletaio/fleta/process/gateway"
-	"github.com/fletaio/fleta/process/payment"
-	"github.com/fletaio/fleta/process/vault"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/amount"
+	"github.com/fletaio/fleta_v1/core/types"
+	"github.com/fletaio/fleta_v1/process/admin"
+	"github.com/fletaio/fleta_v1/process/formulator"
+	"github.com/fletaio/fleta_v1/process/gateway"
+	"github.com/fletaio/fleta_v1/process/payment"
+	"github.com/fletaio/fleta_v1/process/vault"
 )
 
 // FletaApp is app

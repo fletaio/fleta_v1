@@ -3,7 +3,7 @@ package types
 import (
 	"encoding/json"
 
-	"github.com/fletaio/fleta/common"
+	"github.com/fletaio/fleta_v1/common"
 )
 
 // Account defines common account functions

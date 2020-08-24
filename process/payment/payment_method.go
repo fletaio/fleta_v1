@@ -1,10 +1,10 @@
 package payment
 
 import (
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/amount"
-	"github.com/fletaio/fleta/core/types"
-	"github.com/fletaio/fleta/encoding"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/amount"
+	"github.com/fletaio/fleta_v1/core/types"
+	"github.com/fletaio/fleta_v1/encoding"
 )
 
 func (p *Payment) getRequestPayment(lw types.LoaderWrapper, TXID string) (*RequestPayment, error) {

@@ -1,8 +1,8 @@
 package key
 
 import (
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/hash"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/hash"
 )
 
 // Key defines crypto key functions

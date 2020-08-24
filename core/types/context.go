@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/fletaio/fleta/common"
-	"github.com/fletaio/fleta/common/hash"
+	"github.com/fletaio/fleta_v1/common"
+	"github.com/fletaio/fleta_v1/common/hash"
 )
 
 // Context is an intermediate in-memory state using the context data stack between blocks
