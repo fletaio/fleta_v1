@@ -6,7 +6,6 @@ import (
 
 	"github.com/fletaio/fleta_v1/common"
 	"github.com/fletaio/fleta_v1/core/types"
-	"github.com/fletaio/fleta_v1/encoding"
 	"github.com/fletaio/fleta_v1/process/admin"
 )
 
@@ -15,6 +14,7 @@ type UpdatePolicy struct {
 	Timestamp_ uint64
 	Seq_       uint64
 	From_      common.Address
+	Platform   string
 	Policy     *Policy
 }
 
@@ -60,10 +60,10 @@ func (tx *UpdatePolicy) Validate(p types.Process, loader types.LoaderWrapper, si
 
 // Execute updates the context by the transaction
 func (tx *UpdatePolicy) Execute(p types.Process, ctw *types.ContextWrapper, index uint16) error {
-	if bs, err := encoding.Marshal(tx.Policy); err != nil {
+	sp := p.(*Gateway)
+
+	if err := sp.SetPolicy(ctw, tx.Platform, tx.Policy); err != nil {
 		return err
-	} else {
-		ctw.SetProcessData(tagPolicy, bs)
 	}
 	return nil
 }
@@ -88,6 +88,13 @@ func (tx *UpdatePolicy) MarshalJSON() ([]byte, error) {
 	buffer.WriteString(`,`)
 	buffer.WriteString(`"from":`)
 	if bs, err := tx.From_.MarshalJSON(); err != nil {
+		return nil, err
+	} else {
+		buffer.Write(bs)
+	}
+	buffer.WriteString(`,`)
+	buffer.WriteString(`"platform":`)
+	if bs, err := json.Marshal(tx.Platform); err != nil {
 		return nil, err
 	} else {
 		buffer.Write(bs)

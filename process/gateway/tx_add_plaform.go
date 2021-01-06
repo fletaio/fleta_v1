@@ -1,53 +1,49 @@
-package vault
+package gateway
 
 import (
 	"bytes"
 	"encoding/json"
 
 	"github.com/fletaio/fleta_v1/common"
-	"github.com/fletaio/fleta_v1/common/amount"
 	"github.com/fletaio/fleta_v1/core/types"
 	"github.com/fletaio/fleta_v1/process/admin"
 )
 
-// UpdateDefaultFee is used to update vault policy
-type UpdateDefaultFee struct {
+// AddPlatform is used to update gateway policy
+type AddPlatform struct {
 	Timestamp_ uint64
 	Seq_       uint64
 	From_      common.Address
-	DefaultFee *amount.Amount
+	Platform   string
+	Policy     *Policy
 }
 
 // Timestamp returns the timestamp of the transaction
-func (tx *UpdateDefaultFee) Timestamp() uint64 {
+func (tx *AddPlatform) Timestamp() uint64 {
 	return tx.Timestamp_
 }
 
 // Seq returns the sequence of the transaction
-func (tx *UpdateDefaultFee) Seq() uint64 {
+func (tx *AddPlatform) Seq() uint64 {
 	return tx.Seq_
 }
 
 // From returns the from address of the transaction
-func (tx *UpdateDefaultFee) From() common.Address {
+func (tx *AddPlatform) From() common.Address {
 	return tx.From_
 }
 
 // Validate validates signatures of the transaction
-func (tx *UpdateDefaultFee) Validate(p types.Process, loader types.LoaderWrapper, signers []common.PublicHash) error {
-	sp := p.(*Vault)
+func (tx *AddPlatform) Validate(p types.Process, loader types.LoaderWrapper, signers []common.PublicHash) error {
+	sp := p.(*Gateway)
 
-	if tx.DefaultFee == nil {
-		return ErrInvalidDefaultFee
-	}
-	if tx.DefaultFee.Less(amount.COIN.DivC(100000000)) {
-		if !tx.DefaultFee.IsZero() {
-			return ErrInvalidDefaultFee
-		}
-	}
 	if tx.From() != sp.admin.AdminAddress(loader, p.Name()) {
 		return admin.ErrUnauthorizedTransaction
 	}
+	if tx.Policy == nil {
+		return ErrInvalidPolicy
+	}
+
 	if tx.Seq() <= loader.Seq(tx.From()) {
 		return types.ErrInvalidSequence
 	}
@@ -63,19 +59,17 @@ func (tx *UpdateDefaultFee) Validate(p types.Process, loader types.LoaderWrapper
 }
 
 // Execute updates the context by the transaction
-func (tx *UpdateDefaultFee) Execute(p types.Process, ctw *types.ContextWrapper, index uint16) error {
-	ctw.SetProcessData(tagDefaultFee, tx.DefaultFee.Bytes())
-	if tx.DefaultFee.IsZero() {
-		ctw.SetProcessData(tagDefaultFeeIsZero, []byte{1})
-	} else {
-		ctw.SetProcessData(tagDefaultFeeIsZero, []byte{})
-	}
+func (tx *AddPlatform) Execute(p types.Process, ctw *types.ContextWrapper, index uint16) error {
+	sp := p.(*Gateway)
 
+	if err := sp.AddPlatform(ctw, tx.Platform, tx.Policy); err != nil {
+		return err
+	}
 	return nil
 }
 
 // MarshalJSON is a marshaler function
-func (tx *UpdateDefaultFee) MarshalJSON() ([]byte, error) {
+func (tx *AddPlatform) MarshalJSON() ([]byte, error) {
 	var buffer bytes.Buffer
 	buffer.WriteString(`{`)
 	buffer.WriteString(`"timestamp":`)
@@ -99,8 +93,15 @@ func (tx *UpdateDefaultFee) MarshalJSON() ([]byte, error) {
 		buffer.Write(bs)
 	}
 	buffer.WriteString(`,`)
-	buffer.WriteString(`"default_fee":`)
-	if bs, err := tx.DefaultFee.MarshalJSON(); err != nil {
+	buffer.WriteString(`"platform":`)
+	if bs, err := json.Marshal(tx.Platform); err != nil {
+		return nil, err
+	} else {
+		buffer.Write(bs)
+	}
+	buffer.WriteString(`,`)
+	buffer.WriteString(`"policy":`)
+	if bs, err := tx.Policy.MarshalJSON(); err != nil {
 		return nil, err
 	} else {
 		buffer.Write(bs)

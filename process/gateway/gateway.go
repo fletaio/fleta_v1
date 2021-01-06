@@ -2,7 +2,6 @@ package gateway
 
 import (
 	"github.com/fletaio/fleta_v1/core/types"
-	"github.com/fletaio/fleta_v1/encoding"
 	"github.com/fletaio/fleta_v1/process/admin"
 	"github.com/fletaio/fleta_v1/process/vault"
 )
@@ -64,26 +63,27 @@ func (p *Gateway) Init(reg *types.Register, pm types.ProcessManager, cn types.Pr
 	reg.RegisterTransaction(2, &TokenOut{})
 	reg.RegisterTransaction(3, &TokenLeave{})
 	reg.RegisterTransaction(4, &UpdatePolicy{})
+	reg.RegisterTransaction(5, &AddPlatform{})
 	return nil
 }
 
 // InitPolicy called at OnInitGenesis of an application
-func (p *Gateway) InitPolicy(ctw *types.ContextWrapper, policy *Policy) error {
+func (p *Gateway) InitPolicy(ctw *types.ContextWrapper, Platform string, policy *Policy) error {
 	ctw = types.SwitchContextWrapper(p.pid, ctw)
 
-	if bs, err := encoding.Marshal(policy); err != nil {
-		return err
-	} else {
-		ctw.SetProcessData(tagPolicy, bs)
-	}
-	return nil
+	return p.AddPlatform(ctw, Platform, policy)
 }
 
 // OnLoadChain called when the chain loaded
 func (p *Gateway) OnLoadChain(loader types.LoaderWrapper) error {
+	lw := types.NewLoaderWrapper(p.pid, loader)
+
 	p.admin.AdminAddress(loader, p.Name())
-	if bs := loader.ProcessData(tagPolicy); len(bs) == 0 {
-		return ErrPolicyShouldBeSetupInApplication
+	Platforms := p.Platforms(loader)
+	for _, v := range Platforms {
+		if bs := lw.ProcessData(toPolicyKey(v)); len(bs) == 0 {
+			return ErrPolicyShouldBeSetupInApplication
+		}
 	}
 	return nil
 }
